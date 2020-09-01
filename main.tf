@@ -1,6 +1,6 @@
 provider "tfe" {
   hostname="tfe.msk.pub"
-  token="d8FhMZtHnZDHVA.atlasv1.4jWLPdrRf6zSLvrhnMOa7neZKW3vaa4a1qUw7tnl9abHz70lgo50SyV4y4WbXNNM6Ic"
+  token="abc"
 }
 
 #####################
@@ -15,7 +15,6 @@ data "tfe_organization_membership" "user1" {
 output "user1" {
   value = data.tfe_organization_membership.user1
 }
-
 
 #####################
 # User2 was invited via UI, has not logged in, and has not accepted the invitation. User 2 get added to team 1. Team 1 to already existed.
@@ -48,12 +47,6 @@ resource "tfe_organization_membership" "user3" {
   organization  = "org1"
   email = "user3@msk.pub"
 }
-
-#data "tfe_organization_membership" "user3" {
-#  organization  = "org1"
-#  email = "user3@msk.pub"
-#  depends_on = [tfe_organization_membership.user3]
-#}
 
 data "tfe_team" "team1-test2" {
   name         = "team1"
