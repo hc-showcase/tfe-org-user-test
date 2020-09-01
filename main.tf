@@ -1,6 +1,6 @@
 provider "tfe" {
   hostname="tfe.msk.pub"
-  token="d8FhMZtHnZDHVA.atlasv1.4jWLPdrRf6zSLvrhnMOa7neZKW3vaa4a1qUw7tnl9abHz70lgo50SyV4y4WbXNNM6Ic"
+  token="abc"
 }
 
 #####################
